@@ -11,6 +11,9 @@ class Notebook
   end
 
   def all_titles
+    @notes.each do |note|
+      puts "Title: #{note[:title]}"
+    end
   end
 
   def show_notes
