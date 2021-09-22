@@ -11,12 +11,11 @@ class Notebook
   end
 
   def all_titles
-    
   end
 
   def show_notes
-    @notes.each do |x|
-      print "Title: #{x[:title]}, Body: #{x[:body]}"
+    @notes.each do |note|
+      print "Title: #{note[:title]}, Body: #{note[:body]}"
     end
   end
 end
