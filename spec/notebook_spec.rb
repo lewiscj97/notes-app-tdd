@@ -9,4 +9,8 @@ describe Notebook do
       expect{subject.show_notes}.to output("Title: This is the title, Body: and this is the body").to_stdout
     end
   end
+
+  describe "#all_titles" do
+    it { is_expected.to respond_to(:all_titles) }
+  end
 end
