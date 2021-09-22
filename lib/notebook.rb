@@ -18,7 +18,7 @@ class Notebook
 
   def show_notes
     @notes.each do |note|
-      print "Title: #{note[:title]}, Body: #{note[:body]}"
+      puts "Title: #{note[:title]}, Body: #{note[:body]}"
     end
   end
 end
