@@ -12,5 +12,12 @@ describe Notebook do
 
   describe "#all_titles" do
     it { is_expected.to respond_to(:all_titles) }
+
+    it "shows all of the titles of the notes in the notebook" do
+      subject.new_note("This is the title", "and this is the body")
+      subject.new_note("This is another title", "and this is the new body")
+
+      expect{subject.all_titles}.to output("Title: This is the title\n Title: This is another title").to_stdout
+    end
   end
 end
