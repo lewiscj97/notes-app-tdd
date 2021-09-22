@@ -1,3 +1,9 @@
+# This is a work in progress
+# TODO:
+# Create a note class, and create a new object each time
+# When printing titles, print a number next to the list, for easy selection
+# Think about how irb will run this and alter if necessary - see dev branch
+
 class Notebook
   def initialize
     @notes = []
