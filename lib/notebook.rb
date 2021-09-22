@@ -8,6 +8,7 @@ class Notebook
       title: title,
       body: body
     }
+    nil
   end
 
   def all_titles
@@ -19,6 +20,7 @@ class Notebook
 
   def show_note(title)
     note = @notes.detect { |note| note[:title] == title }
+    raise "This note doesn't exist" if note == nil
     puts "Title: #{note[:title]}"
     puts "Body: #{note[:body]}"
     nil
