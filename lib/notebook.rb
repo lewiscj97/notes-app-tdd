@@ -16,6 +16,12 @@ class Notebook
     end
   end
 
+  def show_note(title)
+    note = @notes.detect { |note| note[:title] == title }
+    puts "Title: #{note[:title]}"
+    puts "Body: #{note[:body]}"
+  end
+
   def show_notes
     @notes.each do |note|
       puts "Title: #{note[:title]}, Body: #{note[:body]}"
