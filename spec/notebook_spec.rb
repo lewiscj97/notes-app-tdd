@@ -20,4 +20,8 @@ describe Notebook do
       expect{subject.all_titles}.to output("Title: This is the title\nTitle: This is another title\n").to_stdout
     end
   end
+
+  describe "#show_note" do
+    it { is_expected.to respond_to(:show_note) }
+  end
 end
