@@ -30,5 +30,11 @@ describe Notebook do
 
       expect{ subject.show_note("This is the title") }.to output("Title: This is the title\nBody: and this is the body\n").to_stdout
     end
+
+    it "raises an exception if a note does not have the title passed as an argument" do
+      subject.new_note("This is the title", "and this is the body")
+
+      expect { subject.show_note("Another title")}.to raise_error("This note doesn't exist")
+    end
   end
 end
